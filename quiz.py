@@ -11,6 +11,9 @@ class Quiz:
     def print_answers(self):  # ну а тут Ответы
         for answer in self.answers:
             print(answer)
+    def check_user_answer(self, user_answer):
+        if user_answer.lower() == self.true_answer.lower():
+            print("Правильный Ответ")
 
 
 question1 = Quiz(question="Ты Руслан?", answers=["Да", "Нет"], true_answer="Да")
@@ -19,5 +22,7 @@ question1 = Quiz(question="Ты Руслан?", answers=["Да", "Нет"], true
 def first_logic():
     question1.print_question()
     question1.print_answers()
-
+    user_answer = input("Твой Ответ: ")
+    question1.check_user_answer(user_answer)
 # хочу спать ваще
+# не спи
